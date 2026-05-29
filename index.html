@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relasi dan Fungsi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel intro">
+      <div>
+        <p class="eyebrow">Matematika Diskret</p>
+        <h1>Analisis Relasi dan Fungsi</h1>
+        <p class="subtitle">Masukkan domain, kodomain, dan pasangan berurutan untuk memeriksa validitas relasi serta menentukan apakah relasi tersebut fungsi.</p>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <form class="panel input-panel" id="relationForm">
+        <label for="domainInput">
+          Himpunan A (Domain)
+          <span>pisahkan elemen dengan koma</span>
+        </label>
+        <input id="domainInput" type="text" placeholder="Contoh: 1, 2, 3" autocomplete="off">
+
+        <label for="codomainInput">
+          Himpunan B (Kodomain)
+          <span>pisahkan elemen dengan koma</span>
+        </label>
+        <input id="codomainInput" type="text" placeholder="Contoh: a, b, c" autocomplete="off">
+
+        <label for="relationInput">
+          Relasi R
+          <span>gunakan pasangan berurutan</span>
+        </label>
+        <textarea id="relationInput" rows="4" placeholder="Contoh: (1,a), (2,b), (3,c)"></textarea>
+
+        <div class="actions">
+          <button type="submit" class="primary">Analisis</button>
+          <button type="button" id="exampleBtn">Contoh</button>
+          <button type="button" id="resetBtn">Reset</button>
+        </div>
+      </form>
+
+      <section class="panel result-panel" aria-live="polite">
+        <h2>Hasil Analisis</h2>
+        <div id="resultBox" class="result empty">
+          Masukkan data lalu tekan tombol Analisis.
+        </div>
+      </section>
+    </section>
+
+    <section class="panel visual-panel">
+      <div class="visual-header">
+        <h2>Visualisasi Mapping</h2>
+        <p>Panah menunjukkan pasangan dari A ke B.</p>
+      </div>
+      <div id="mappingCanvas" class="mapping-canvas">
+        <p class="placeholder">Visualisasi akan muncul setelah data dianalisis.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
